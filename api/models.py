@@ -21,6 +21,9 @@ class Stack(models.Model):
     alt = models.CharField(max_length=200, null=True, blank=True)
     category = models.CharField(max_length=50, null=True, blank=True)
 
+    class Meta:
+        ordering = ['category']
+
     def __str__(self):
         return self.stack_name
 
