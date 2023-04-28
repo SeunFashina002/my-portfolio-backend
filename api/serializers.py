@@ -15,7 +15,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     def get_image(self, obj):
         image_url = obj.image.url
-        full_url = f"/static{image_url}"
+        full_url = f"{settings.BASE_URL}/static{image_url}"
         return full_url
 
     def to_representation(self, instance):
@@ -33,7 +33,7 @@ class SlideShowSerializer(ModelSerializer):
 
     def get_image(self, obj):
         image_url = obj.image.url
-        full_url = f"/static{image_url}"
+        full_url = f"{settings.BASE_URL}/static{image_url}"
         return full_url
 
     def to_representation(self, instance):
@@ -51,7 +51,7 @@ class FunctionalitySerializer(ModelSerializer):
 
     def get_images(self, obj):
         image_url = obj.images.url
-        full_url = f"/static{image_url}"
+        full_url = f"{settings.BASE_URL}/static{image_url}"
         return full_url
 
     def to_representation(self, instance):
@@ -68,7 +68,7 @@ class StackSerializer(ModelSerializer):
 
     def get_stack_image(self, obj):
         image_url = obj.stack_image.url
-        full_url = f"/static{image_url}"
+        full_url = f"{settings.BASE_URL}/static{image_url}"
         return full_url
 
     def to_representation(self, instance):
