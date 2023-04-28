@@ -36,7 +36,7 @@ DEBUG = ast.literal_eval(debug_val)
 
 # ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000', 'http://localhost:8000', '127.0.0.1', 'https://myportfolio-u707.onrender.com']
+ALLOWED_HOSTS = [ 'localhost:8000', '127.0.0.1', 'myportfolio-u707.onrender.com']
 
 
 
